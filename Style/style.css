@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Music&display=swap');
+
 /* css reset */
 * {
 	margin: 0;
@@ -6,7 +9,7 @@
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: 'Roboto Slab',serif;
+	font-family: "Noto Music", sans-serif;
     box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
@@ -65,7 +68,21 @@ main{
     align-items: center;
 
 }
-
+.titleHead{
+    font-size: 28px;
+    font-weight: 400;
+}
+.header button {
+    background-color: transparent;
+    cursor: pointer;
+}
+.header button img{
+    width: 35px;
+}
+.imgInfoButtons{
+    display: flex;
+    gap: 40px;
+}
 .container {
     background: #bebebe;
     flex: 1; /* Ocupar todo o espaço restante */
@@ -85,11 +102,8 @@ main{
     align-items: center;
 
 }
-.header button {
-    background-color: #ccc;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+.footer button img{
+    width: 35px;
 }
 
 /* Estilos para o painel de informações */
