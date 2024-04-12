@@ -47,16 +47,17 @@ body{
     background: #212121;
     padding: 3% 12%;
 }
+
 main{
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background: #3d3d3d;
     border-radius: 10px ;
     display: flex;
     flex-direction: column;
 
 }
+
 .header {
     background: #d9d9d9;
     height: 80px ;
@@ -84,7 +85,7 @@ main{
     gap: 40px;
 }
 .container {
-    background: #bebebe;
+    background-image: url(/img/image-microscopio.png);
     flex: 1; /* Ocupar todo o espaço restante */
     display: flex; /* Adicionar flex para centralizar o conteúdo */
     justify-content: center; /* Centralizar horizontalmente */
@@ -105,24 +106,72 @@ main{
 .footer button img{
     width: 35px;
 }
+/* fullscreen css */
+body.fullscreen-mode {
+    padding: 0;
+}
 
+.header.fullscreen-mode,
+.footer.fullscreen-mode,
+main{
+    border-radius: 0;
+}
 /* Estilos para o painel de informações */
 .info-panel {
     position: absolute;
     right: 0px; 
-    width: 0px;/* Inicialmente escondido */
+    width: 0px;
     height: 100%;
-    background-color: #e6e6e679;
+    background: #F5F4F4E8;
     transition: width 0.3s ease, opacity 0.3s ease;
     z-index: 999; 
-    opacity: 0; /* Inicialmente invisível */
-    
+    opacity: 0; 
     padding: 30px;
+    display: flex;
 }
+
 .info-panel.active {
     width: 250px;
-    opacity: 1; /* Torna a div visível */
+    opacity: 1; 
 }
+.information {
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    animation-name: fadeIn;
+    animation-delay: 0,2s;
+    animation-duration: 0.3s; 
+    animation-fill-mode: forwards;
+    animation-timing-function: ease; 
+}
+.image-info{
+    background: #d9d9d9;
+    min-width: 100px;
+    min-height: 100px;
+}
+.title-info{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+.description-info{
+    font-size: 14px;
+    line-height: 25px;
+}
+/* animação fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Inicia com opacidade zero */
+    }
+    to {
+        opacity: 1; /* Termina com opacidade total */
+    }
+}
+
 .controlersButtons{
     display: flex;
     gap: 20px;
