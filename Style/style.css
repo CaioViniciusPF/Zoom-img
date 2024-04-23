@@ -85,12 +85,20 @@ main{
     gap: 40px;
 }
 .container {
-    background-image: url(/img/image-microscopio.png);
+
     flex: 1; /* Ocupar todo o espaço restante */
     display: flex; /* Adicionar flex para centralizar o conteúdo */
     justify-content: center; /* Centralizar horizontalmente */
     align-items: center; /* Centralizar verticalmente */
     position: relative;
+    overflow: hidden;
+}
+.zoom-Image{
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    object-fit: fill;
+    transition: transform 0.3s ease;
 }
 
 .footer {
