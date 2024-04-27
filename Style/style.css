@@ -85,7 +85,7 @@ main{
     gap: 40px;
 }
 .container {
-
+   background: #d9d9d959;
     flex: 1; /* Ocupar todo o espaço restante */
     display: flex; /* Adicionar flex para centralizar o conteúdo */
     justify-content: center; /* Centralizar horizontalmente */
@@ -98,6 +98,7 @@ main{
     width: 100%;
     max-height: 100%;
     object-fit: fill;
+    position: absolute;
     transition: transform 0.3s ease;
 }
 
