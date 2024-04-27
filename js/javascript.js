@@ -63,7 +63,7 @@ function updateTransform() {
     
   } else if (translateX < -qtdZoom*10 ){
     translateX = -qtdZoom*10 ;
-    ;
+    
 
   }
   
@@ -73,10 +73,7 @@ function updateTransform() {
   } else if (translateY < -qtdZoom*10) {
     translateY = -qtdZoom*10;
   }
-  console.log(imageWidth);
-  console.log(translateY);
-  console.log(translateX)
-  console.log("Zoom: " + qtdZoom);
+  
   zoomImage.style.transform = `scale(${scale})`;
   zoomImage.style.left=`${translateX}%`;
   zoomImage.style.top=`${translateY}%`;
