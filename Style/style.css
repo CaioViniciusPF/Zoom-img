@@ -115,6 +115,7 @@ main{
 .footer button img{
     width: 35px;
 }
+
 /* fullscreen css */
 body.fullscreen-mode {
     padding: 0;
@@ -182,10 +183,27 @@ main{
 }
 
 .controlersButtons{
+    box-sizing: border-box;
     display: flex;
     gap: 20px;
     border-radius: 30px;
     background: #eeeeee;
-    padding: 10px 40px;
+    padding: 5px 40px;
+    
+}
+ button{
+    position: relative;
+    border-radius: 20%;
+    transition:  0.3s ;
+    padding: 4px;
+}
+ button:hover{
+    box-shadow: 4px 4px 0px 0px rgba(75, 75, 75, 0.3) ;
+    transition:  0.3s ;
 }
 
+button:active{
+    background: #e4e4e4;
+    box-shadow: inset -4px 4px 0px 0px rgba(75, 75, 75, 0.3);
+    transition:  0s ;
+}
